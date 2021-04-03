@@ -1,102 +1,89 @@
-!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html>
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <body>
+        <header>
 
-</head>
-<body>
+            <div id="mySidenav" class="sidenav">
+                <a href="#">About Me</a>
+                <a href="#">Projects</a>
+                <a href="#">Skills</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+            <h2></h2>
+        </header>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        <section>
+            <div class= "nav">
+                <img id="BigPic" src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg" alt="">
+            </div>
+        
+            <article>
+                <h1>About Me</h1>
+                <p>Hi! I'm Ada, Countess of Lovelace and am an English mathematician and writer, chiefly known for my work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine.</p>
+                <p>I am one of the first to recognize that machines have applications beyond pure calculation, and to have published the first algorithm intended to be carried out by such a machine. </p>
+                <p>In my free time I like to read about scientific developments, mathematics, and computational mathematics. I also like to take my chances of winning big. </p>
+                <p>Fun fact! I've been programing for NaN seconds!</p>
+            </article>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
+            <article>
+                <h3>Projects</h3>
+                <ul>
+                    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Diagram_for_the_computation_of_Bernoulli_numbers.jpg/220px-Diagram_for_the_computation_of_Bernoulli_numbers.jpg"><li>The first computer program</li></a>
+                        <p id="hideClick">The world's first computer program for computing Bernoulli numbers.</p>
+                    
+                    <a href="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555925585/shape/mentalfloss/analyticalmachine_babbage_london.jpg?itok=5vRTwQjb"><li>The Analytical Engine</li></a>
+                        <p id="hideClick">I helped Charles Babbage on topics ranging from math to computation that helped the development of the Analytical Engine. </p>
+                    
+                    <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Ada_Mascot_with_slogan.svg/220px-Ada_Mascot_with_slogan.svg.png"><li>The Ada programming language</li></a>
+                        <p id="hideClick">My work inspired the United States Department of Defense to name their new programming language after me. </p>
+                </ul>
+            </article>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="https://placehold.it/1200x400?text=IMAGE" alt="Image">
-        <div class="carousel-caption">
-          <h3>Sell $</h3>
-          <p>Money Money.</p>
-        </div>      
-      </div>
+    
+                
+            
 
-      <div class="item">
-        <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
-        <div class="carousel-caption">
-          <h3>More Sell $</h3>
-          <p>Lorem ipsum...</p>
-        </div>      
-      </div>
-    </div>
+            <article>
+                <h3>Skills</h3>
+                <div class="grid-container">
+                    <div class="item1">
+                           <img id="sLogo" src="data:image/png;base64,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" alt="">
+                    </div>
+                    <div class="item2">
+                        <img id="sLogo" src="https://p.kindpng.com/picc/s/198-1985029_css-logo-black-and-white-hd-png-download.png" alt="Html Logo">
+                    </div>
+                    <div class="item3">
+                        <img id="sLogo" src="https://www.pngfind.com/pngs/m/13-139438_js-on-light-background-node-js-logo-png.png" alt="">
+                    </div>  
+                    <div class="item4">
+                        <img id="sLogo" src="https://w1.pngwing.com/pngs/328/643/png-transparent-dog-and-cat-github-logo-symbol-chocolatey-white-black-circle.png" alt="">
+                    </div>
+                    <div class="item5">
+                     <img id="sLogo" src="https://png2.cleanpng.com/sh/65852ffa84c07b5934ff18d44e6a079a/L0KzQYm3VsI1N6V7kpH0aYP2gLBuTf1qa6N0i9HvdD3oiLTsjL1ucZR3hAV4ZoSwf7ftifNmNaduiAdqbD3lccTwg71nd6MyTdQ8MEW7RYi7UvNla2YzTaMDNEa5RYq4VcI6QGo5UasEMke2RnB3jvc=/kisspng-microsoft-excel-microsoft-office-visual-basic-for-5b30585742cdc5.5184665915298949992736.png" alt="JavaScript PNG, Transparent JS Logo">
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-  
-<div class="container text-center">    
-  <h3>What We Do</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Current Project</p>
-    </div>
-    <div class="col-sm-4"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Project 2</p>    
-    </div>
-    <div class="col-sm-4">
-      <div class="well">
-       <p>Some text..</p>
-      </div>
-      <div class="well">
-       <p>Some text..</p>
-      </div>
-    </div>
-  </div>
-</div><br>
+                    </div>
+                    <div class="item6">
+                        <img id="sLogo" src=" https://banner2.cleanpng.com/20180611/bh/kisspng-production-logo-front-and-back-ends-front-end-web-frontend-web-development-5b1e0a81e993a1.7946447015286954259567.jpg" alt="">  
+                    </div>
+                </div>
+            </article>
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
 
-</body>
+          
+
+
+
+
+
+
+        </section>
+        <footer>
+        <p>Made with ♥ in London</p>
+        </footer>
+    </body>
 </html>
+
